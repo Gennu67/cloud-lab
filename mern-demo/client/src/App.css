@@ -1,0 +1,436 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1e293b;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  color: white;
+  padding: 55px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle {
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+  opacity: 0.8;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin: 0 0 12px;
+}
+
+.description {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.student-count {
+  width: 130px;
+  height: 130px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(10px);
+}
+
+.student-count span {
+  font-size: 42px;
+  font-weight: bold;
+}
+
+.student-count small {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+  width: 84%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.form-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-bottom: 40px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background: #2563eb;
+  color: white;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+.card-title h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.card-title p {
+  margin: 5px 0 0;
+  color: #64748b;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+}
+
+.form-group input {
+  height: 48px;
+  padding: 0 15px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+
+  font-size: 15px;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.submit-btn {
+  margin-top: 25px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 13px 22px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.submit-btn span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  font-size: 14px;
+}
+
+/* =========================
+   LIST
+========================= */
+
+.list-section {
+  margin-bottom: 50px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+.list-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.list-header p {
+  margin: 7px 0 0;
+  color: #64748b;
+}
+
+.total {
+  background: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #64748b;
+}
+
+.total strong {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+/* =========================
+   STUDENT GRID
+========================= */
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.student-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+
+  transition: 0.2s;
+}
+
+.student-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.1);
+}
+
+.student-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.avatar {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 16px;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.student-number {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.student-top h3 {
+  margin: 4px 0 0;
+  font-size: 19px;
+}
+
+.student-info {
+  border-top: 1px solid #eef2f7;
+  padding-top: 15px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 8px 0;
+}
+
+.label {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.value {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty {
+  grid-column: 1 / -1;
+
+  background: white;
+  border-radius: 18px;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  color: #64748b;
+}
+
+.empty-icon {
+  font-size: 45px;
+}
+
+.empty h3 {
+  color: #334155;
+  margin: 15px 0 5px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #0f172a;
+  color: #94a3b8;
+
+  padding: 25px 8%;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 13px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer span {
+  color: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .header {
+    padding: 40px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .student-count {
+    width: 100px;
+    height: 100px;
+  }
+
+  .container {
+    width: 92%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
