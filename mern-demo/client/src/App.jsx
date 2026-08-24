@@ -23,7 +23,7 @@ function App() {
   // API URL
   // =========================
   const API_URL =
-    "https://didactic-adventure-5gqwq7v5gwwq279x7-5000.app.github.dev";
+    "http://localhost:5000"
 
 
   // =====================================================
