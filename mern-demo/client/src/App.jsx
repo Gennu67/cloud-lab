@@ -324,7 +324,7 @@ function App() {
 
 
           <h1>
-            Quản lý sinh viên
+            Quản lý sinh viên - Version 2.0
           </h1>
 
 
