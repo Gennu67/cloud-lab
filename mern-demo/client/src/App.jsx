@@ -324,7 +324,7 @@ const API_URL = import.meta.env.VITE_API_URL || "https://mern-backend-235827.onr
 
 
           <h1>
-            Quản lý sinh viên
+            Quản lý sinh viên - Version 2.0
           </h1>
 
 

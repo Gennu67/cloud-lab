@@ -1,12 +1,13 @@
 services:
   backend:
-    image: thanhthao16705/mern-backend:1.0
+    image: thanhthao16705/mern-backend:1.2
     ports:
       - "5000:5000"
     environment:
       MONGODB_URI: ${MONGODB_URI}
+      CLIENT_URL: https://mern-frontend-235827.onrender.com
 
   frontend:
-    image: thanhthao16705/mern-frontend:1.0
+    image: thanhthao16705/mern-frontend:2.2
     ports:
       - "4173:4173"
