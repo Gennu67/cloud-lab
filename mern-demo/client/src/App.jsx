@@ -23,8 +23,7 @@ function App() {
   // API URL
   // =========================
   
-const API_URL = import.meta.env.VITE_API_URL || "https://mern-backend-235827.onrender.com";
-
+const API_URL = "";
 
   // =====================================================
   // CÂU 47 + CÂU 59 + CÂU 63

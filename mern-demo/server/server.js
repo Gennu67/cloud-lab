@@ -35,6 +35,15 @@ app.use(cors({
 
 app.use(express.json());
 
+
+// HEALTH CHECK - CAU 44
+app.get('/health', (req, res) => {
+    res.status(200).json({
+        status: 'UP',
+        timestamp: new Date(),
+        uptime: process.uptime()
+    });
+});
 // Kiem tra Backend
 app.get("/api/hello", (req, res) => {
     res.json({ message: "Backend is working!" });
@@ -123,7 +132,7 @@ mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log("MongoDB Atlas connected successfully!");
         app.listen(PORT, "0.0.0.0", () => {
-            console.log(`Server running on port ${PORT}`);
+            console.log("Server running on port", PORT, "- Auto Deploy Test");
         });
     })
     .catch((error) => {
